@@ -7,16 +7,18 @@ import {
   Text,
   ContactShadows,
 } from "@react-three/drei";
+import Player from "./Player.jsx";
 
 export default function Experience() {
   const iphone = useGLTF(
     "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/iphone-x/model.gltf"
   );
-
+  //https://models.readyplayer.me/6605eda875cd33aaccd53d67.glb
   return (
     <>
-      <color args={["#fffff"]} attach="background" />
+      <color args={["#0f0f0f"]} attach="background" />
       <Environment preset="sunset" />
+
       <PresentationControls
         global
         polar={[-0.4, 0.2]}
@@ -41,9 +43,10 @@ export default function Experience() {
               <iframe src="https://pordigy-wd-04.vercel.app/"></iframe>
             </Html>
           </primitive>
+          <Player />
           <Text
             position={[-2.3, 0.75, 0.75]}
-            color={"black"}
+            color={"white"}
             fontSize={0.5}
             rotation-y={0}
             maxWidth={2}
